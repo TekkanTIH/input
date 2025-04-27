@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta charset="viewport" content="width-device-width, initial-scale=1.0">
+        <title>SUM Calution</title>
+    </head>
+    <body>
+        <h1>Sum Calution</h1>
+        <label for="Nhập số A">Nhập số A:</label>
+        <input type="number" id="inputA"><br/><br/>
+
+        <label for="Nhập số B">Nhập số B:</label>
+        <input type="number" id="inputB"><br/><br/>
+
+        <button id="sumButton">SUM</button><br/><br/>
+
+        <label for="Kết quả">Kết quả:</label>
+        <input type="text" id="result" readonly><br/><br/>
+
+        <script>
+            document.getElementById('sumButton').addEventListener('click', function () {
+                const inputA = parseFloat(document.getElementById('inputA').value) || 0;
+                const inputB = parseFloat(document.getElementById('inputB').value) || 0;
+                const sum = inputA + inputB;
+             document.getElementById('result').value = sum;});
+        </script>
+    </body>
+</html>
